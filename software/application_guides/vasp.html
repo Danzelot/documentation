@@ -1,0 +1,388 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>VASP (Vienna Ab initio Simulation Package) &mdash; Sigma2/Metacenter documentation  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Sigma2/Metacenter documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">News</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://opslog.sigma2.no">Latest changes and events</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.sigma2.no/hardware-status">Hardware live status</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Getting help</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_help/support_line.html">Support line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_help/how_to_write_good_support_requests.html">Writing good support requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_help/qa-sessions.html">Open Question &amp; Answer Sessions for All Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_help/lost_forgotten_password.html">Lost or expiring password</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_help/project_leader_support.html">Project leader support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_help/advanced_user_support.html">Advanced User Support (AUS)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_help/publish_research_data.html">Publish Research Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_help/course_resources.html">CRaaS - Course Resources as a Service</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/applying_account.html">How do I get an HPC account?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/applying_resources.html">Applying for computing and storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/training.html">Training material</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/editing_files.html">Editing files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/create_ssh_keys.html">SSH</a></li>
+</ul>
+<p class="caption"><span class="caption-text">HPC Machines</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../hpc_machines/hardware_overview.html">Overview over our machines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hpc_machines/betzy.html">Betzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hpc_machines/fram.html">Fram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hpc_machines/saga.html">Saga</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://hpc-uit.readthedocs.io">Stallo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../hpc_machines/migration2metacenter.html">Migration to a Metacenter HPC machine</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Software</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modulescheme.html">Software Module Scheme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installed_software.html">Installed Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../containers.html">Running Singularity and Docker containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appguides.html">Application guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinstallsw.html">How can I, as a user, install software for myself or my project with EasyBuild?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userinstallsw.html#how-can-i-as-user-install-python-packages">How can I as user install Python packages?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../licenses.html">Licenses and access policies</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Jobs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../jobs/submitting.html">Submitting jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jobs/choosing_job_types.html">Job Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jobs/job_scripts.html">Job Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jobs/running-scientific-software.html">Running scientific software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jobs/monitoring.html">Monitoring jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jobs/choosing_memory_settings.html">How to choose the right amount of memory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jobs/common_job_failures.html">Common job failures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jobs/performance.html">How to check the performance and scaling using Arm Performance Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jobs/interactive_jobs.html">Interactive jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jobs/projects_accounting.html">Projects and accounting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jobs/network-access.html">No network access on compute nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jobs/dos_and_donts.html">Dos and Don’ts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jobs/guides.html">Guides</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Files and Storage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../files_storage/nird.html">NIRD - National Infrastructure for Research Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files_storage/clusters.html">Storage areas on HPC clusters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files_storage/backup.html">Backup on Betzy, Fram, Saga, and NIRD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files_storage/sharing_files.html">Data handling and storage policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files_storage/file_transfer.html">File transfer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files_storage/performance.html">Storage performance tuning</a></li>
+</ul>
+<p class="caption"><span class="caption-text">NIRD Toolkit</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nird_toolkit/overview_nird_toolkit.html">What is the NIRD Toolkit ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nird_toolkit/getting_started_guide.html">Get ready to deploy a service through the NIRD Toolkit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nird_toolkit/package-install.html">Installing a package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nird_toolkit/persistent-storage.html">Enabling persistent storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nird_toolkit/application-management.html">Application management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nird_toolkit/package-usage.html">Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nird_toolkit/custom-docker-image.html">Using a custom docker image to add new packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nird_toolkit/terms.html">Glossary</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Research Data Archive</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nird_archive/user-guide.html">Research Data Archive User Guide</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Code Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../code_development/building.html">Building scientific software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code_development/compilers.html">Compilers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code_development/debugging.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code_development/performance.html">Performance Analysis and Tuning</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Sigma2/Metacenter documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>VASP (Vienna Ab initio Simulation Package)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/UNINETTSigma2/documentation/blob/master/software/application_guides/vasp.md" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="vasp-vienna-ab-initio-simulation-package">
+<h1>VASP (Vienna Ab initio Simulation Package)<a class="headerlink" href="#vasp-vienna-ab-initio-simulation-package" title="Permalink to this headline">¶</a></h1>
+<p>VASP is a software package for performing ab-initio quantum-mechanical calculation of a periodic arrangement of atoms using the projector-augmented wave method and a plane wave basis set. The package can perform density-functional-theory (DFT) calculations, or many-body-perturbation-theory (MBPT) like GW etc. Please consult the documentation to get a more detailed overview of its feature set.</p>
+<div class="section" id="online-information-from-vendor">
+<h2>Online information from vendor<a class="headerlink" href="#online-information-from-vendor" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Homepage: https://www.vasp.at</p></li>
+<li><p>Documentation: https://cms.mpi.univie.ac.at/wiki/index.php/The_VASP_Manual</p></li>
+<li><p>User forum: https://www.vasp.at/forum/</p></li>
+</ul>
+</div>
+<div class="section" id="installed-on-facilities">
+<h2>Installed on facilities<a class="headerlink" href="#installed-on-facilities" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Saga</p></li>
+<li><p>Fram</p></li>
+</ul>
+</div>
+<div class="section" id="supported-versions">
+<h2>Supported versions<a class="headerlink" href="#supported-versions" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>5.4.4</p></li>
+<li><p>6.1 (not yet installed, ETA will be notified)</p></li>
+</ul>
+</div>
+<div class="section" id="license-and-access-policy">
+<h2>License and access policy<a class="headerlink" href="#license-and-access-policy" title="Permalink to this headline">¶</a></h2>
+<p>VASP is a commercial software package that requires a license for all who wants to use it. For a user to get access to the VASP executables installed on the Sigma2 systems they must perform the following steps:</p>
+<ul class="simple">
+<li><p>The users research group must have a valid VASP licence. To acquire a licence, please consult the “<em>How can I purchase a VASP license?</em>” in this link: https://www.vasp.at/faqs/.</p></li>
+<li><p>We need to get a confirmation from a VASP representative to confirm that the user have access to the license. The group representative of the user needs to contact the VASP team using licensing&#64;vasp.at and ask them to send a confirmation email to support&#64;metacenter.no to confirm that the user have a valid licence.</p></li>
+</ul>
+<p>Once we receive the confirmation email we will add the user in question to the VASP group, which would give access to the VASP modules on the Sigma2 systems.</p>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>You load the application by typing:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ module load VASP/&lt;version&gt;
+</pre></div>
+</div>
+<p>For more information on available versions, type:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ module avail VASP
+</pre></div>
+</div>
+<p>Users have to supply the necessary input files, inclusing any <code class="docutils literal notranslate"><span class="pre">POTCAR</span></code> files needed. They can be downloaded from the VASP portal you get access to with a valid VASP license. Also, please note that the <code class="docutils literal notranslate"><span class="pre">POTCAR</span></code> files are protected by the license.</p>
+</div>
+<div class="section" id="specifics-regarding-the-vasp-install-on-fram">
+<h2>Specifics regarding the VASP install on Fram.<a class="headerlink" href="#specifics-regarding-the-vasp-install-on-fram" title="Permalink to this headline">¶</a></h2>
+<p>Note as of Febn 2020 that this is similar on Saga, but we are currently moving to a more automatic deployment system and the naming scheme is thus different on Saga. Expect Fram and Saga to be similar and this document updated by the end of spring 2020.</p>
+<div class="section" id="vasp-binary-naming-scheme-on-fram">
+<h3>VASP Binary naming scheme on Fram<a class="headerlink" href="#vasp-binary-naming-scheme-on-fram" title="Permalink to this headline">¶</a></h3>
+<p>Note that the VASP installation on Fram mainly follows the standard syntax introduced by the VASP team with their new installation scheme.</p>
+<p>If you do check the bin directories of the different VASP installs on Fram you will see that there is quite a few binaries - and this might appear confusing. So here is an explanation:</p>
+<ol class="simple">
+<li><p>All binaries are compiled with support for maximally-localised Wannier functions and the <a class="reference external" href="http://www.wannier.org/">Wannier90</a> program, library for Bayesian error estimation functionals (<a class="reference external" href="https://github.com/vossjo/libbeef">libbeef</a>) and also the MPI flag in FPP (-DMPI).</p></li>
+<li><p>The binaries comes with a unmodified and a modified flavour (modifications are done in the file constr_cell_relax.F and are for simulating epitaxially constrained thin films (abfix) and for simulting cells with point defects which break the symmetry (noshear)). Basically, modification in this sense means a modification in the original source code without adding additional functionality (aka tools).</p></li>
+<li><p>Support for various tools are added, including [occupation matrix control] (https://github.com/WatsonGroupTCD/Occupation-matrix-control-in-VASP), <a class="reference external" href="http://theory.cm.utexas.edu/vtsttools/">transition state tools for VASP</a> and <a class="reference external" href="http://vaspsol.mse.ufl.edu/">implicit solvation model for VASP</a>(file extensions <em>ocm</em>, <em>tst</em>, <em>sol</em> respectively).</p></li>
+</ol>
+<p>To minimize the number of binaries, they are built in layers:
+First, untooled versions were built - with and without modifications. vasp_std/gam/ncl is totally unmodified in every way, while vasp_std/gam/ncl_abfix/noshear contains the modifications of constr_cell_relax.F as mentioned above.</p>
+<p>Then, for the tooled binaries - we have assumed that vTST does not harm anything, thus all tooled versions are with this tool. Thus only the one with file extension <em>tst</em> has only vTST support and not the other tools mentioned. VASPsol is build on top of vTST - so binaries with the file extesion <em>sol</em> has got both vTST and VASPsol support. On top of this again, the binaries with occupation matrix support, with extension <em>ocm</em> has both vTST and VASPsol support together with occupation matrix support.</p>
+<p>Also the tooled binaries are compiled with both unmodified and modified constr_cell_relax.F, making the total number of binaries 36 for this setup.</p>
+<p><em>Short summary:</em></p>
+<ul class="simple">
+<li><p>umodified binaries: vasp_std, vasp_gam, vasp_ncl</p></li>
+<li><p>modified binaries: vasp_std_abfix, vasp_ncl_noshear</p></li>
+<li><p>tooled binaries: vasp_std_tst, vasp_std_tst_noshear (both modified and unmodified.)</p></li>
+<li><p>tooled binaries comes in layers: tst is tst only, sol is tst <em>and</em> sol, ocm is tst <em>and</em> sol <em>and</em> ocm.</p></li>
+</ul>
+</div>
+<div class="section" id="fpp-settings-for-each-binary">
+<h3>FPP settings for each binary<a class="headerlink" href="#fpp-settings-for-each-binary" title="Permalink to this headline">¶</a></h3>
+<p>The VASP installation on Fram mainly follows the build instructions provided by the VASP team. The makefile.include we use for Fram is the file called <em>makefile.include.linux_intel</em> in the <em>arch</em> folder in the vasp.5.4.4 distro. On top of this, we have added the line:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>CPP_OPTIONS+= -DVASP2WANNIER90v2 -Dlibbeef
+</pre></div>
+</div>
+<p>for all our binaries. (for full build setup, feel free to ask)</p>
+<div class="section" id="all-fpp-settings-in-the-makefile-follows-standard-setup-provided-by-vasp">
+<h4>All FPP settings in the makefile follows standard setup provided by VASP:<a class="headerlink" href="#all-fpp-settings-in-the-makefile-follows-standard-setup-provided-by-vasp" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>vasp_std is compiled with additional FPP flag -DNGZhalf.</p></li>
+<li><p>vasp_gam is compiled with additional FPP flags -DNGZhalf -DwNGZhalf.</p></li>
+<li><p>vasp_ncl is compiled with no additional FPP flags.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="memory-allocation-for-vasp-in-fram">
+<h3>Memory allocation for VASP in Fram<a class="headerlink" href="#memory-allocation-for-vasp-in-fram" title="Permalink to this headline">¶</a></h3>
+<p>VASP is known to be potentially memory demanding. Quite often, you might experience to use less than the full number of cores on the node, but still all of the memory.</p>
+<p>For relevant core-count, node-count and amounts of memory, see <span class="xref myst">About Fram</span>.</p>
+<p>For fram, currently the only way of increasing the memory per core available for jobs is to reduce the number of cores per node, please read up in the <span class="xref myst">Job Scripts</span> section of the documentation.</p>
+</div>
+</div>
+<div class="section" id="citation">
+<h2>Citation<a class="headerlink" href="#citation" title="Permalink to this headline">¶</a></h2>
+<p>When publishing results obtained with the software referred to, please do check the developers web page in order to find the correct citation(s). Also, remember to acknowledge Sigma2 for the computational resources.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Sigma2/Metacenter
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

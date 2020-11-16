@@ -1,0 +1,491 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>How can I, as a user, install software for myself or my project with EasyBuild? &mdash; Sigma2/Metacenter documentation  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Licenses and access policies" href="licenses.html" />
+    <link rel="prev" title="Application guides" href="appguides.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Sigma2/Metacenter documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">News</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://opslog.sigma2.no">Latest changes and events</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.sigma2.no/hardware-status">Hardware live status</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Getting help</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_help/support_line.html">Support line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_help/how_to_write_good_support_requests.html">Writing good support requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_help/qa-sessions.html">Open Question &amp; Answer Sessions for All Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_help/lost_forgotten_password.html">Lost or expiring password</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_help/project_leader_support.html">Project leader support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_help/advanced_user_support.html">Advanced User Support (AUS)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_help/publish_research_data.html">Publish Research Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_help/course_resources.html">CRaaS - Course Resources as a Service</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/applying_account.html">How do I get an HPC account?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/applying_resources.html">Applying for computing and storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/training.html">Training material</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/editing_files.html">Editing files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/create_ssh_keys.html">SSH</a></li>
+</ul>
+<p class="caption"><span class="caption-text">HPC Machines</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hpc_machines/hardware_overview.html">Overview over our machines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hpc_machines/betzy.html">Betzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hpc_machines/fram.html">Fram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hpc_machines/saga.html">Saga</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://hpc-uit.readthedocs.io">Stallo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hpc_machines/migration2metacenter.html">Migration to a Metacenter HPC machine</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Software</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="modulescheme.html">Software Module Scheme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installed_software.html">Installed Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="containers.html">Running Singularity and Docker containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appguides.html">Application guides</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How can I, as a user, install software for myself or my project with EasyBuild?</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installing-software-in-home-folder">Installing software in home-folder:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-software-in-project-folder">Installing software in project folder:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-software-installed-in-non-standard-path">Using software installed in non-standard path:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#how-can-i-as-user-install-python-packages">How can I as user install Python packages?</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#using-the-virtual-environment-in-a-batch-script">Using the virtual environment in a batch script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-anaconda-and-miniconda-in-batch">Using Anaconda and Miniconda in batch</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="licenses.html">Licenses and access policies</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Jobs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../jobs/submitting.html">Submitting jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jobs/choosing_job_types.html">Job Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jobs/job_scripts.html">Job Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jobs/running-scientific-software.html">Running scientific software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jobs/monitoring.html">Monitoring jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jobs/choosing_memory_settings.html">How to choose the right amount of memory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jobs/common_job_failures.html">Common job failures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jobs/performance.html">How to check the performance and scaling using Arm Performance Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jobs/interactive_jobs.html">Interactive jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jobs/projects_accounting.html">Projects and accounting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jobs/network-access.html">No network access on compute nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jobs/dos_and_donts.html">Dos and Don’ts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jobs/guides.html">Guides</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Files and Storage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../files_storage/nird.html">NIRD - National Infrastructure for Research Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files_storage/clusters.html">Storage areas on HPC clusters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files_storage/backup.html">Backup on Betzy, Fram, Saga, and NIRD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files_storage/sharing_files.html">Data handling and storage policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files_storage/file_transfer.html">File transfer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files_storage/performance.html">Storage performance tuning</a></li>
+</ul>
+<p class="caption"><span class="caption-text">NIRD Toolkit</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../nird_toolkit/overview_nird_toolkit.html">What is the NIRD Toolkit ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nird_toolkit/getting_started_guide.html">Get ready to deploy a service through the NIRD Toolkit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nird_toolkit/package-install.html">Installing a package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nird_toolkit/persistent-storage.html">Enabling persistent storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nird_toolkit/application-management.html">Application management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nird_toolkit/package-usage.html">Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nird_toolkit/custom-docker-image.html">Using a custom docker image to add new packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nird_toolkit/terms.html">Glossary</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Research Data Archive</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../nird_archive/user-guide.html">Research Data Archive User Guide</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Code Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../code_development/building.html">Building scientific software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code_development/compilers.html">Compilers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code_development/debugging.html">Debugging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code_development/performance.html">Performance Analysis and Tuning</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Sigma2/Metacenter documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>How can I, as a user, install software for myself or my project with EasyBuild?</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/UNINETTSigma2/documentation/blob/master/software/userinstallsw.md" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="how-can-i-as-a-user-install-software-for-myself-or-my-project-with-easybuild">
+<h1>How can I, as a user, install software for myself or my project with EasyBuild?<a class="headerlink" href="#how-can-i-as-a-user-install-software-for-myself-or-my-project-with-easybuild" title="Permalink to this headline">¶</a></h1>
+<p>Currently, the software-team in the Metacenter is using the <a class="reference external" href="https://easybuild.readthedocs.io/en/latest/">EasyBuild system</a> for installing system-wide software and scientific applications. It is, actually, quite easy (hence the name) and straight forward for users to do install with the same tool.</p>
+<p>There are two distinct scenarios covered in this tutorial; first installations for single user only - placing the software in standard user home folder. Second, installations for a project/group - placing the software in a project folder for many to share.</p>
+<p>Note that the software install team at the Norwegian Metacenter <strong>never</strong> do installations in <code class="docutils literal notranslate"><span class="pre">$HOME</span></code> for users, and preferably not in /cluster/projects.</p>
+<div class="section" id="installing-software-in-home-folder">
+<h2>Installing software in home-folder:<a class="headerlink" href="#installing-software-in-home-folder" title="Permalink to this headline">¶</a></h2>
+<p>Log in to Fram your preferred way. Note that there is, currently at least, no default modules on Fram. Thus you need to be explicit. The easybuild version changes at least a couple of times a year, so do check what is the available version(s) by typing:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>module avail easybuild
+</pre></div>
+</div>
+<p>Now, as of November 2020, you will see this:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>module avail EasyBuild
+
+----------------------- /cluster/modulefiles/all ------------------------
+   EasyBuild/4.3.1
+
+Use &quot;module spider&quot; to find all possible modules.
+Use &quot;module keyword key1 key2 ...&quot; to search for all possible modules
+matching any of the &quot;keys&quot;.
+</pre></div>
+</div>
+<p>Choose 4.3.1 in this case and load this module by typing:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>module load EasyBuild/4.3.1
+</pre></div>
+</div>
+<p>Now, we advice to do an install in three steps, first download the sources of your software, then do a test run where you check what will be installed and then the full install.</p>
+<p>Say you want to install <a class="reference external" href="http://cran.r-project.org/web/packages/rjags">rjags 4.6</a>, you would need to find out which <em><a class="reference external" href="https://easybuild.readthedocs.io/en/latest/Writing_easyconfig_files.html#what-is-an-easyconfig-file">easybuild easyconfigs</a></em> that is currently available for that explicit code. This you would find here: <a class="reference external" href="https://github.com/easybuilders/easybuild-easyconfigs/tree/master/easybuild/easyconfigs/r/rjags">https://github.com/easybuilders/easybuild-easyconfigs/tree/master/easybuild/easyconfigs/r/rjags</a>. A general overview of all community available <em>easyconfigs</em> is available here:<a class="reference external" href="https://github.com/easybuilders/easybuild-easyconfigs/tree/master/easybuild/easyconfigs">https://github.com/easybuilders/easybuild-easyconfigs/tree/master/easybuild/easyconfigs</a>. In this example we choose the <em>easyconfig</em> for rjags version 4-6 with, compiled with the full intel suite release from second half of 2017 and aimed at R release 3.4.3 (thus the long name of the eb-file).</p>
+<p>To download the source of software, type:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>eb rjags-4-6-intel-2017b-R-3.4.3.eb --fetch
+</pre></div>
+</div>
+<p>It may be a good idea to get an overview of what will be installed with the command you are planning to use, this you get by the command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>eb rjags-4-6-intel-2017b-R-3.4.3.eb --dry-run
+</pre></div>
+</div>
+<p>if this proves successful, then type:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>eb rjags-4-6-intel-2017b-R-3.4.3.eb --robot
+</pre></div>
+</div>
+<p>Then the process should go absolutely fine, and you will receive a nice little message on the command line stating that installation succeeded.</p>
+<p>Now the software and the module(s) you installed are in a folder called “.local”. You can inspect it by typing (note the path!)</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cd .local/easybuild
+</pre></div>
+</div>
+<p>There you should see the following:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>build  ebfiles_repo  modules  software  sources
+</pre></div>
+</div>
+</div>
+<div class="section" id="installing-software-in-project-folder">
+<h2>Installing software in project folder:<a class="headerlink" href="#installing-software-in-project-folder" title="Permalink to this headline">¶</a></h2>
+<p>Do as described above regarding login, loading of the EasyBuild module and considerations regarding what to install.</p>
+<p>Then do as follows:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>mkdir -p /cluster/projects/nnXXXXk/easybuild
+eb rjags-4-6-intel-2017b-R-3.4.3.eb --fetch --prefix=/cluster/projects/nnXXXXk/easybuild
+eb rjags-4-6-intel-2017b-R-3.4.3.eb --dry-run --prefix=/cluster/projects/nnXXXXk/easybuild #as mentioned above.
+</pre></div>
+</div>
+<p>where XXXX is your project id number. When a successful download of sources is made, then type:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>eb rjags-4-6-intel-2017b-R-3.4.3.eb --prefix=/cluster/projects/nnXXXXk/easybuild
+</pre></div>
+</div>
+<p>Note the easybuild folder in the path, this is a tip for housekeeping and not strictly required. This will give the path structure as for the local case, with the software and modulefiles installed in <strong>cluster/projects/nnXXXXk/easybuild</strong>.</p>
+<p>A bit more elegant, since the long and horrid path is used thrice, you may do this:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>projsw=/cluster/projects/nnXXXXk/easybuild
+mkdir -p $projsw
+eb rjags-4-6-intel-2017b-R-3.4.3.eb --fetch --prefix=$projsw
+eb rjags-4-6-intel-2017b-R-3.4.3.eb --dry-run --prefix=$projsw
+</pre></div>
+</div>
+<p>###For more advanced settings:</p>
+<p>Please check upon options with</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>eb --help
+</pre></div>
+</div>
+<p>or read up on the <a class="reference external" href="https://easybuild.readthedocs.io/en/latest/">EasyBuild documentation</a> on web.</p>
+</div>
+<div class="section" id="using-software-installed-in-non-standard-path">
+<h2>Using software installed in non-standard path:<a class="headerlink" href="#using-software-installed-in-non-standard-path" title="Permalink to this headline">¶</a></h2>
+<p>The default path for modulefiles only contains the centrally installed modules. Thus, if you want the modulefilesystem to find the software you installed either for your own usage or on behalf of the project group, you need to make the module-system aware of alternative paths.</p>
+<p><strong>For the case of install in user-home: (still using the rjags example)</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>module use .local/easybuild/modules/all
+module avail rjags #Just to check if it is found
+module load rjags/4-6-intel-2017b-R-3.4.3
+</pre></div>
+</div>
+<p><strong>For the case of installing i group/project folder:</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>module use /cluster/projects/nnXXXXk/easybuild/modules/all
+module avail rjags #Just to check if it is found
+module load rjags/4-6-intel-2017b-R-3.4.3
+</pre></div>
+</div>
+<p><strong>For more information about the module system, please see:</strong> <a class="reference external" href="https://lmod.readthedocs.io/en/latest/">https://lmod.readthedocs.io/en/latest/</a></p>
+</div>
+</div>
+<div class="section" id="how-can-i-as-user-install-python-packages">
+<h1>How can I as user install Python packages?<a class="headerlink" href="#how-can-i-as-user-install-python-packages" title="Permalink to this headline">¶</a></h1>
+<p>Users can install Python packages in a virtual Python environment. Here is how
+you create a virtual environment with the command <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code>:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the virtual environment.</span>
+virtualenv my_new_pythonenv
+<span class="c1"># Activate the environment.</span>
+<span class="nb">source</span> my_new_pythonenv/bin/activate
+<span class="c1"># Install packages with pip. Here we install pandas.</span>
+pip install pandas
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When running software from your Python environment in a batch script, it is
+<em>highly</em> recommended to activate the environment <em>only</em> in the script (see
+below), while keeping the login environment clean when submitting the job,
+otherwise the environments can interfere with each other (even if they are the
+same).</p>
+</div>
+<div class="section" id="using-the-virtual-environment-in-a-batch-script">
+<h2>Using the virtual environment in a batch script<a class="headerlink" href="#using-the-virtual-environment-in-a-batch-script" title="Permalink to this headline">¶</a></h2>
+<p>In a batch script you will activate the virtual environment in the same way as
+above. You must just load the python module first:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Set up job environment
+set -o errexit # exit on any error
+set -o nounset # treat unset variables as error
+
+# Load modules
+module load Python/3.7.2-GCCcore-8.2.0
+
+# Set the ${PS1} (needed in the source of the virtual environment for some Python versions)
+export PS1=\$
+
+# activate the virtual environment
+source my_new_pythonenv/bin/activate
+
+# execute example script
+python pdexample.py
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-anaconda-and-miniconda-in-batch">
+<h2>Using Anaconda and Miniconda in batch<a class="headerlink" href="#using-anaconda-and-miniconda-in-batch" title="Permalink to this headline">¶</a></h2>
+<p>An alternative to creating virtual environments with virtualenv, is to create
+environment with Anaconda or Miniconda. To able to use the conda
+environment in a batch script, you will need to source a conda environment
+file. First create a environment, here also installing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># load Anaconda3</span>
+<span class="n">module</span> <span class="n">load</span> <span class="n">Anaconda3</span><span class="o">/</span><span class="mf">2019.03</span>
+
+<span class="c1"># install pandas as part of creating the environment</span>
+<span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">t</span> <span class="n">testenv</span> <span class="n">pandas</span>
+
+<span class="c1"># activate the environment</span>
+<span class="n">conda</span> <span class="n">activate</span> <span class="n">testenv</span>
+</pre></div>
+</div>
+<p>To be able to use this environment in a batch script, you will need to include
+the following in your batch script, before calling the python program:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># load the Anaconda3
+module load Anaconda3/2019.03
+
+# Set the ${PS1} (needed in the source of the Anaconda environment)
+export PS1=\$
+
+# Source the conda environment setup
+# The variable ${EBROOTANACONDA3} comes with the
+# module load command
+source ${EBROOTANACONDA3}/etc/profile.d/conda.sh
+
+# Deactivate any spill-over environment from the login node
+conda deactivate &amp;&gt;/dev/null
+
+# Activate the environment by using the full path (not name)
+# to the environment. The full path is listed if you do
+# conda info --envs at the command prompt.
+conda activate /cluster/home/rnl/anaconda3/envs/testenv
+
+# Execute the python program
+python pdexample.py
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="licenses.html" class="btn btn-neutral float-right" title="Licenses and access policies" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="appguides.html" class="btn btn-neutral float-left" title="Application guides" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Sigma2/Metacenter
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
